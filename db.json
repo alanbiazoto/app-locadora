@@ -1,0 +1,48 @@
+{
+  "cliente": [
+    {
+      "id": 1,
+      "cpf": "08054318960",
+      "nome": "Alan Biazoto",
+      "idade": 29
+    },
+    {
+      "id": 2,
+      "cpf": "12345678909",
+      "nome": "Andre Tancredo",
+      "idade": 25
+    },
+    {
+      "cpf": "12345678900",
+      "nome": "João da Silva",
+      "idade": "38",
+      "id": 3
+    }
+  ],
+  "autor": [
+    {
+      "nome": "Woody Allen",
+      "dtnasc": "1935-12-02T00:00:00-03:00",
+      "nacionalidade": "Estados Unidos",
+      "img": "https://br.web.img2.acsta.net/pictures/15/05/20/18/02/040297.jpg",
+      "obs": "Woody Allen, nome artístico de Allan Stewart Königsberg, é um cineasta, roteirista, escritor, ator e músico norte-americano. Allen trabalhou como um escritor de comédia na década de 1950, escrevendo piadas e roteiros para televisão e publicação de vários livros de peças curtas de humor",
+      "id": 1
+    },
+    {
+      "nome": "Steven Spielberg",
+      "dtnasc": "1946-12-19T10:08:59.238-03:00",
+      "nacionalidade": "Estados Unidos",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/6/67/Steven_Spielberg_by_Gage_Skidmore.jpg",
+      "obs": "Steven Allan Spielberg KBE OMRI é um premiado cineasta, produtor cinematográfico, roteirista e empresário norte-americano. Spielberg é o diretor que tem mais filmes na lista dos 100 Melhores Filmes Americanos de Todos os Tempos, feita pelo American Film Institute",
+      "id": 2
+    },
+    {
+      "nome": "Quentin Tarantino",
+      "dtnasc": "1963-03-28T00:00:00-03:00",
+      "nacionalidade": "Estados Unidos",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Quentin_Tarantino_by_Gage_Skidmore.jpg",
+      "obs": "Quentin Jerome Tarantino é um cineasta, roteirista, produtor, ator e diretor de fotografia norte-americano. É vencedor de dois Oscars de melhor roteiro original e foi eleito o 19° maior diretor de cinema dos últimos 25 anos segundo o levantamento da Quartz através do Metacritic",
+      "id": 3
+    }
+  ]
+}
