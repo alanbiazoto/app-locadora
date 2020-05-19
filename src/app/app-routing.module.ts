@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'autor',
     loadChildren: () => import('./autor/autor.module').then( m => m.AutorPageModule)
   },
+  {
+    path: 'filme',
+    loadChildren: () => import('./filme/filme.module').then( m => m.FilmePageModule)
+  },
 ];
 
 @NgModule({

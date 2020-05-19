@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Filmes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="./thumbnail.svg">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Titulo</h2>
+        <p>Genero</p>
+        <p>Autor</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="start">
+    <ion-fab-button color="secondary" [routerLink]="['/home']">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button color="secondary" [routerLink]="['/filme', 'cadastro']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
