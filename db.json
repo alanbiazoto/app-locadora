@@ -19,6 +19,7 @@
       "id": 3
     }
   ],
+  "genero": [],
   "autor": [
     {
       "nome": "Woody Allen",
@@ -45,24 +46,92 @@
       "id": 3
     }
   ],
-  "filme":[
+  "filme": [
     {
-      "id":1,
-      "nome":"Missão Impossivel",
-      "dtlanc":"1963-03-28T00:00:00-03:00",
-      "sinopse":"teste de sinopse",
-      "img":"",
-      "autor":[{
-        "nome": "Quentin Tarantino",
-        "dtnasc": "1963-03-28T00:00:00-03:00",
+      "id": 1,
+      "nome": "Missão Impossivel",
+      "dtlanc": "1963-03-28T00:00:00-03:00",
+      "sinopse": "teste de sinopse",
+      "img": "https://abrilveja.files.wordpress.com/2018/07/entretenimento-missao-impossivel-20180726-001.jpg?quality=70&strip=info&resize=680,453",
+      "autor": {
+        "nome": "Woody Allen",
+        "dtnasc": "1935-12-02T00:00:00-03:00",
         "nacionalidade": "Estados Unidos",
-        "img": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Quentin_Tarantino_by_Gage_Skidmore.jpg",
-        "obs": "Quentin Jerome Tarantino é um cineasta, roteirista, produtor, ator e diretor de fotografia norte-americano. É vencedor de dois Oscars de melhor roteiro original e foi eleito o 19° maior diretor de cinema dos últimos 25 anos segundo o levantamento da Quartz através do Metacritic",
-        "id": 3}
-      ]
+        "img": "https://br.web.img2.acsta.net/pictures/15/05/20/18/02/040297.jpg",
+        "obs": "Woody Allen, nome artístico de Allan Stewart Königsberg, é um cineasta, roteirista, escritor, ator e músico norte-americano. Allen trabalhou como um escritor de comédia na década de 1950, escrevendo piadas e roteiros para televisão e publicação de vários livros de peças curtas de humor",
+        "id": 1
+      }
     },
     {
-
+      "nome": "O pimentinha",
+      "dtlanc": "2020-05-19",
+      "sinopse": {},
+      "img": "https://br.web.img3.acsta.net/medias/nmedia/18/91/08/28/20128492.jpg",
+      "autor": {
+        "nome": "Woody Allen",
+        "dtnasc": "1935-12-02T00:00:00-03:00",
+        "nacionalidade": "Estados Unidos",
+        "img": "https://br.web.img2.acsta.net/pictures/15/05/20/18/02/040297.jpg",
+        "obs": "Woody Allen, nome artístico de Allan Stewart Königsberg, é um cineasta, roteirista, escritor, ator e músico norte-americano. Allen trabalhou como um escritor de comédia na década de 1950, escrevendo piadas e roteiros para televisão e publicação de vários livros de peças curtas de humor",
+        "id": 1
+      },
+      "id": 2
+    }
+  ],
+  "locacao": [
+    {
+      "cliente": {
+        "id": 1,
+        "cpf": "08054318960",
+        "nome": "Alan Biazoto",
+        "idade": 29
+      },
+      "filme": {
+        "id": 1,
+        "nome": "Missão Impossivel",
+        "dtlanc": "1963-03-28T00:00:00-03:00",
+        "sinopse": "teste de sinopse",
+        "img": "https://abrilveja.files.wordpress.com/2018/07/entretenimento-missao-impossivel-20180726-001.jpg?quality=70&strip=info&resize=680,453",
+        "autor": {
+          "nome": "Woody Allen",
+          "dtnasc": "1935-12-02T00:00:00-03:00",
+          "nacionalidade": "Estados Unidos",
+          "img": "https://br.web.img2.acsta.net/pictures/15/05/20/18/02/040297.jpg",
+          "obs": "Woody Allen, nome artístico de Allan Stewart Königsberg, é um cineasta, roteirista, escritor, ator e músico norte-americano. Allen trabalhou como um escritor de comédia na década de 1950, escrevendo piadas e roteiros para televisão e publicação de vários livros de peças curtas de humor",
+          "id": 1
+        }
+      },
+      "dataInicio": "2020-05-20",
+      "dataFim": "2020-05-21",
+      "valor": 12,
+      "id": 1
+    },
+    {
+      "cliente": {
+        "id": 2,
+        "cpf": "12345678909",
+        "nome": "Andre Tancredo",
+        "idade": 25
+      },
+      "filme": {
+        "nome": "O pimentinha",
+        "dtlanc": "2020-05-19",
+        "sinopse": {},
+        "img": "https://br.web.img3.acsta.net/medias/nmedia/18/91/08/28/20128492.jpg",
+        "autor": {
+          "nome": "Woody Allen",
+          "dtnasc": "1935-12-02T00:00:00-03:00",
+          "nacionalidade": "Estados Unidos",
+          "img": "https://br.web.img2.acsta.net/pictures/15/05/20/18/02/040297.jpg",
+          "obs": "Woody Allen, nome artístico de Allan Stewart Königsberg, é um cineasta, roteirista, escritor, ator e músico norte-americano. Allen trabalhou como um escritor de comédia na década de 1950, escrevendo piadas e roteiros para televisão e publicação de vários livros de peças curtas de humor",
+          "id": 1
+        },
+        "id": 2
+      },
+      "dataInicio": "2020-05-20T00:24:02.740Z",
+      "dataFim": "2020-05-20T00:24:02.740Z",
+      "valor": 1,
+      "id": 2
     }
   ]
 }

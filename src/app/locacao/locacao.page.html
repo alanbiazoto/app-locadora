@@ -1,24 +1,24 @@
 <ion-header>
   <ion-toolbar color="secondary">
-    <ion-title>Filme</ion-title>
+    <ion-title>Locação</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
   <ion-slides>
-    <ion-slide *ngFor='let filme of filmes'>
+    <ion-slide *ngFor='let locacao of locacoes'>
       <ion-card>
-        <img src="{{filme.img}}" />
+        <img src="{{locacao.filme.img}}" />
         <ion-card-header>
-          <ion-card-title>{{filme.nome}}</ion-card-title>
+          <ion-card-title>{{locacao.id}}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          {{filme.sinopse}}<br>
-          <ion-button (click)="confirmarExclusao(filme)" color="secondary">
+          {{locacao.cliente.nome}}<br>
+          <ion-button (click)="confirmarExclusao(locacao)" color="secondary">
             <ion-icon slot="icon-only" name="trash"></ion-icon>
           </ion-button>
-          <ion-button [routerLink]="['/filme/cadastro', filme.id]" color="secondary">
+          <ion-button [routerLink]="['/locacao/cadastro', locacao.id]" color="secondary">
             <ion-icon slot="icon-only" name="create"></ion-icon>
           </ion-button>
 
@@ -34,7 +34,7 @@
   </ion-fab>
 
   <ion-fab vertical="bottom" horizontal="end">
-    <ion-fab-button color="secondary" [routerLink]="['/filme', 'cadastro']">
+    <ion-fab-button color="secondary" [routerLink]="['/locacao', 'cadastro']">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>

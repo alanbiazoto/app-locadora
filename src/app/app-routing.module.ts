@@ -16,12 +16,20 @@ const routes: Routes = [
     loadChildren: () => import('./cliente/cliente.module').then( m => m.ClientePageModule)
   },
   {
+    path: 'genero',
+    loadChildren: () => import('./genero/genero.module').then( m => m.GeneroPageModule)
+  },
+  {
     path: 'autor',
     loadChildren: () => import('./autor/autor.module').then( m => m.AutorPageModule)
   },
   {
     path: 'filme',
     loadChildren: () => import('./filme/filme.module').then( m => m.FilmePageModule)
+  },
+  {
+    path: 'locacao',
+    loadChildren: () => import('./locacao/locacao.module').then( m => m.LocacaoPageModule)
   },
 ];
 

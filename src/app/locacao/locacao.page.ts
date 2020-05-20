@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { Filme } from '../models/filme.interface';
-import { FilmeService } from '../services/filme.service';
+import { Locacao } from '../models/locacao.interface';
+import { LocacaoService } from '../services/locacao.service';
 import { AlertController, LoadingController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-filme',
-  templateUrl: './filme.page.html',
-  styleUrls: ['./filme.page.scss'],
+  selector: 'app-locacao',
+  templateUrl: './locacao.page.html',
+  styleUrls: ['./locacao.page.scss'],
 })
-export class FilmePage implements OnInit {
+export class LocacaoPage implements OnInit {
 
-  filmes: Filme[];
+  locacoes: Locacao[];
 
   constructor(
-    private filmeService: FilmeService,
+    private locacaoService: LocacaoService,
     private alertController: AlertController,
     private loadingController:LoadingController
   ) { }
@@ -28,18 +28,18 @@ export class FilmePage implements OnInit {
   async listar() {
     const busyLoader = await this.loadingController.create({message:'Carregando..'});
     busyLoader.present();
-    this.filmes = await this.filmeService.getFilmes().toPromise();
+    this.locacoes = await this.locacaoService.getLocacaos().toPromise();
     busyLoader.dismiss();
   }
 
-  async confirmarExclusao(filme: Filme) {
+  async confirmarExclusao(locacao: Locacao) {
     let alerta = await this.alertController.create({
       header: 'Confirmação de exclusão',
-      message: `Deseja excluir do filme ${filme.nome}?`,
+      message: `Deseja excluir do locacao ${locacao.filme.nome}?`,
       buttons: [{
         text: 'SIM',
         handler: () => {
-          this.excluir(filme);
+          this.excluir(locacao);
         }
       }, {
         text: 'NÃO'
@@ -48,9 +48,9 @@ export class FilmePage implements OnInit {
     alerta.present();
   }
 
-  private async excluir(filme: Filme) {
+  private async excluir(locacao: Locacao) {
     
-    this.filmeService.excluir(filme).subscribe(() => {
+    this.locacaoService.excluir(locacao).subscribe(() => {
       this.listar()
     });
   }
