@@ -6,6 +6,8 @@ import { NavController, LoadingController } from '@ionic/angular';
 import { AutorPage } from 'src/app/autor/autor.page';
 import { Autor } from 'src/app/models/autor.interface';
 import { AutorService } from 'src/app/services/autor.service';
+import { Genero } from 'src/app/models/genero.interface';
+import { GeneroService } from 'src/app/services/genero.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -15,12 +17,17 @@ import { AutorService } from 'src/app/services/autor.service';
 export class CadastroPage implements OnInit {
 
   filme : Filme;
+
   autores : Autor[];
   autor : Autor;
+  
+  generos : Genero[];
+  genero : Genero;
   
 
   constructor(
     private autorService: AutorService,
+    private generoService: GeneroService,
     private filmeService: FilmeService,
     private activatedRoute : ActivatedRoute,
     private navController : NavController,
@@ -28,8 +35,9 @@ export class CadastroPage implements OnInit {
 
   ) { 
     this.autor = undefined;
+    this.genero = undefined;
     this.listarAutores();
-    this.filme = { nome:'',dtlanc: new Date,sinopse:new Text(),img:'',autor: { nome:'',dtnasc: new Date,nacionalidade:'',img:'',obs:null}};
+    this.filme = { nome:'',dtlanc: new Date,sinopse:null,img:'',autor: { nome:'',dtnasc: new Date,nacionalidade:'',img:'',obs:null},genero:{ descricao:'' }};
 
   }
 
@@ -37,10 +45,15 @@ export class CadastroPage implements OnInit {
     return this.autores;
   }
 
+  getListaGeneros() {
+    return this.generos;
+  }
+
   async listarAutores() {
     const busyLoader = await this.loadingController.create({message:'Carregando..'});
     busyLoader.present();
     this.autores = await this.autorService.getAutores().toPromise();
+    this.generos = await this.generoService.getGeneros().toPromise();
     busyLoader.dismiss();
   }
 
@@ -52,6 +65,7 @@ export class CadastroPage implements OnInit {
       this.filmeService.getFilme(id).subscribe((filme) => {
         this.filme = filme;
         this.autor = this.autores.find(item => item.id == filme.autor.id);
+        this.genero = this.generos.find(item => item.id == filme.genero.id);
       });
     } 
   }

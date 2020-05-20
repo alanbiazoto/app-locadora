@@ -37,7 +37,7 @@ export class CadastroPage implements OnInit {
     this.listar();
     this.locacao = { 
       cliente: { cpf: '', nome:'', idade: null },
-      filme: { nome:'',dtlanc: new Date,sinopse:new Text(),img:'',autor: { nome:'',dtnasc: new Date,nacionalidade:'',img:'',obs:null}},
+      filme: { nome:'',dtlanc: new Date,sinopse:null,img:'',autor: { nome:'',dtnasc: new Date,nacionalidade:'',img:'',obs:null},genero:{ descricao:'' }},
       dataInicio: new Date,
       dataFim: new Date,
       valor: 0
